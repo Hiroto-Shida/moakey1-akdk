@@ -1,0 +1,14 @@
+
+if SHIELD_MOAKEY1_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "moakey1"
+
+endif
+
+if SHIELD_MOAKEY1_LEFT || SHIELD_MOAKEY1_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

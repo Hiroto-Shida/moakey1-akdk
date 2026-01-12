@@ -1,0 +1,14 @@
+
+file_format: "1"
+id: moakey1
+name: moakey1
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - moakey1_left
+  - moakey1_right
