@@ -45,16 +45,16 @@
 &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL       &kp JP_BACKQUOTE            &kp JP_DQUOTE  &kp JP_CARET            &kp JP_LPAREN    &kp JP_RPAREN    &none           &kp BACKSPACE
 &kp LCTRL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS          &kp JP_AT                   &kp JP_COLON   &kp JP_PLUS      &kp JP_LBRACKET  &kp JP_RBRACKET  &kp ENTER       &kp ENTER
 &kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_UNDERSCORE                    &kp EXCL  &kp SEMI       &kp JP_ASTERISK  &kp JP_LBRACE    &kp JP_RBRACE    &kp UP_ARROW    &kp RIGHT_SHIFT
-&none           &none         &none         &kp LEFT_ALT  &kp RIGHT_GUI      &trans                  &trans     &trans           &none            &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
+&none           &none         &none         &kp LEFT_ALT  &kp RIGHT_GUI      &none                   &none      &none            &none            &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_2 {
             bindings = <
-&kp ESCAPE      &none  &none  &none         &none          &kp HASH                        &kp DOLLAR   &none           &kp UP_ARROW    &none             &none  &none
-&kp LCTRL       &none  &none  &none         &none          &kp JP_AMPERSAND                &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none  &none
-&kp LEFT_SHIFT  &none  &none  &kp NUMBER_1         &none                            &kp QUESTION  &kp SLASH    &kp JP_PIPE     &kp LESS_THAN   &kp GREATER_THAN  &none  &none
-&none           &none  &none  &kp LEFT_ALT  &kp RIGHT_GUI  &trans                      &trans   &trans          &none           &none             &none  &none
+&kp ESCAPE      &kp NUMBER_1  &kp NUMBER_1  &kp NUMBER_1         &kp NUMBER_1          &kp HASH                        &kp DOLLAR   &none           &kp UP_ARROW    &none             &none  &none
+&kp LCTRL       &kp NUMBER_1  &kp NUMBER_1  &kp NUMBER_1         &kp NUMBER_1          &kp JP_AMPERSAND                &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none  &none
+&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_1  &kp NUMBER_1         &kp NUMBER_1                            &kp QUESTION  &kp SLASH    &kp JP_PIPE     &kp LESS_THAN   &kp GREATER_THAN  &none  &none
+&kp NUMBER_1           &kp NUMBER_1  &kp NUMBER_1  &kp LEFT_ALT  &kp RIGHT_GUI  &kp NUMBER_1                       &none        &none           &none           &none             &none  &none
             >;
         };
 
