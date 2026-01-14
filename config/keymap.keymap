@@ -42,7 +42,7 @@
 
         layer_1 {
             bindings = <
-&kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL       &kp JP_BACKQUOTE            &kp JP_DQUOTE  &none            &kp JP_LPAREN    &kp JP_RPAREN    &none           &kp BACKSPACE
+&kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL       &kp JP_BACKQUOTE            &kp JP_DQUOTE  &kp JP_CARET            &kp JP_LPAREN    &kp JP_RPAREN    &none           &kp BACKSPACE
 &kp LCTRL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS          &kp JP_AT                   &kp JP_COLON   &kp JP_PLUS      &kp JP_LBRACKET  &kp JP_RBRACKET  &kp ENTER       &kp ENTER
 &kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_UNDERSCORE                    &kp EXCL  &kp SEMI       &kp JP_ASTERISK  &kp JP_LBRACE    &kp JP_RBRACE    &kp UP_ARROW    &kp RIGHT_SHIFT
 &none           &none         &none         &kp LEFT_ALT  &kp RIGHT_GUI      &kp SPACE                   &kp SPACE      &none            &none            &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
