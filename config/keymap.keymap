@@ -28,42 +28,79 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 / {
+    macros {
+        option_cmd_up: option_cmd_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp UP_ARROW>;
+            label = "OPTION_CMD_UP";
+        };
+
+        option_cmd_right: option_cmd_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp RIGHT_ARROW>;
+            label = "OPTION_CMD_RIGHT";
+        };
+
+        option_cmd_down: option_cmd_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp DOWN_ARROW>;
+            label = "OPTION_CMD_DOWN";
+        };
+
+        option_cmd_left: option_cmd_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp LEFT_ARROW>;
+            label = "OPTION_CMD_LEFT";
+        };
+
+        mac_capcha_5: mac_capcha_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp RIGHT_GUI &kp NUMBER_5>;
+            label = "MAC_CAPCHA_5";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp TAB         &kp Q  &kp W    &kp E         &kp R                  &kp T               &kp Y        &kp U          &kp I      &kp O           &kp P           &kp BACKSPACE
-&kp LCTRL       &kp A  &kp S    &kp D         &kp F                  &kp G               &kp H        &kp J          &kp K      &kp L           &kp ENTER       &kp ENTER
-&kp LEFT_SHIFT  &kp Z  &kp X    &kp C         &kp V                               &kp B  &kp N        &kp M          &kp COMMA  &kp PERIOD      &kp UP_ARROW    &kp RIGHT_SHIFT
-&mo 3           &none  &none  &kp LEFT_ALT  &mt RIGHT_GUI JP_EISU  &lt 1 SPACE         &lt 1 SPACE  &lt 2 JP_KANA  &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp TAB         &kp Q  &kp W  &kp E          &kp R                  &kp T               &kp Y        &kp U          &kp I      &kp O           &kp P           &kp BACKSPACE
+&kp LCTRL       &kp A  &kp S  &kp D          &kp F                  &kp G               &kp H        &kp J          &kp K      &kp L           &kp ENTER       &kp ENTER
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C          &kp V                               &kp B  &kp N        &kp M          &kp COMMA  &kp PERIOD      &kp UP_ARROW    &kp RIGHT_SHIFT
+&mo 3           &none  &none  &kp RIGHT_ALT  &mt RIGHT_GUI JP_EISU  &lt 1 SPACE         &lt 1 SPACE  &lt 2 JP_KANA  &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_1 {
             bindings = <
-&kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL       &kp JP_BACKQUOTE            &kp JP_DQUOTE  &kp JP_CARET     &kp JP_LPAREN    &kp JP_RPAREN    &none           &kp BACKSPACE
-&kp LCTRL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS          &kp JP_AT                   &kp JP_COLON   &kp JP_PLUS      &kp JP_LBRACKET  &kp JP_RBRACKET  &kp ENTER       &kp ENTER
-&kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_UNDERSCORE                    &kp EXCL  &kp SEMI       &kp JP_ASTERISK  &kp JP_LBRACE    &kp JP_RBRACE    &kp UP_ARROW    &kp RIGHT_SHIFT
-&none           &none         &none         &kp LEFT_ALT  &kp RIGHT_GUI      &kp SPACE                       &kp SPACE          &none            &none            &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp JP_EQUAL       &kp JP_BACKQUOTE            &kp JP_DQUOTE  &kp JP_CARET     &kp JP_LPAREN    &kp JP_RPAREN    &none           &kp BACKSPACE
+&kp LCTRL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp MINUS          &kp JP_AT                   &kp JP_COLON   &kp JP_PLUS      &kp JP_LBRACKET  &kp JP_RBRACKET  &kp ENTER       &kp ENTER
+&kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp JP_UNDERSCORE                    &kp EXCL  &kp SEMI       &kp JP_ASTERISK  &kp JP_LBRACE    &kp JP_RBRACE    &kp UP_ARROW    &kp RIGHT_SHIFT
+&none           &none         &none         &kp RIGHT_ALT  &kp RIGHT_GUI      &kp SPACE                   &kp SPACE      &none            &none            &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_2 {
             bindings = <
-&kp ESCAPE      &none  &none  &none  &none   &kp HASH                        &kp DOLLAR   &none           &kp UP_ARROW    &none             &none  &none
-&kp LCTRL       &none  &none  &none  &none   &kp JP_AMPERSAND                &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none  &none
-&kp LEFT_SHIFT  &none  &none  &none  &none                     &kp QUESTION  &kp SLASH    &kp JP_PIPE     &kp LESS_THAN   &kp GREATER_THAN  &none  &none
-&none    &none  &none         &kp LEFT_ALT  &kp RIGHT_GUI  &kp SPACE                    &kp SPACE        &none           &none           &none             &none  &none
+&kp ESCAPE      &none  &none             &option_cmd_up    &none              &kp HASH                        &kp DOLLAR   &none           &kp UP_ARROW    &none             &none  &none
+&kp LCTRL       &none  &option_cmd_left  &option_cmd_down  &option_cmd_right  &kp JP_AMPERSAND                &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none  &none
+&kp LEFT_SHIFT  &none  &none             &none             &none                                &kp QUESTION  &kp SLASH    &kp JP_PIPE     &kp LESS_THAN   &kp GREATER_THAN  &none  &none
+&none           &none  &none             &kp RIGHT_ALT     &kp RIGHT_GUI      &kp SPACE                       &kp SPACE    &none           &none           &none             &none  &none
             >;
         };
 
         layer_3 {
             bindings = <
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &kp C_VOLUME_DOWN  &kp K_VOLUME_UP  &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none              &none            &none
-&none  &none  &none  &none  &none         &none  &none  &none  &none  &none              &none            &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none              &none            &none
+&none  &none  &none          &none  &none  &none         &none  &none  &none  &kp C_VOLUME_DOWN  &kp K_VOLUME_UP  &none
+&none  &none  &mac_capcha_5  &none  &none  &none         &none  &none  &none  &none              &none            &none
+&none  &none  &none          &none  &none         &none  &none  &none  &none  &none              &none            &none
+&none  &none  &none          &none  &none  &none         &none  &none  &none  &none              &none            &none
             >;
         };
     };
