@@ -32,35 +32,45 @@
         option_cmd_up: option_cmd_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp UP_ARROW>;
+            bindings = <&macro_press &kp RIGHT_ALT &kp RIGHT_GUI>
+                     , <&macro_tap &kp UP_ARROW>
+                     , <&macro_release &kp RIGHT_ALT &kp RIGHT_GUI>;
             label = "OPTION_CMD_UP";
         };
 
         option_cmd_right: option_cmd_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp RIGHT_ARROW>;
+            bindings = <&macro_press &kp RIGHT_ALT &kp RIGHT_GUI>
+                     , <&macro_tap &kp RIGHT_ARROW>
+                     , <&macro_release &kp RIGHT_ALT &kp RIGHT_GUI>;
             label = "OPTION_CMD_RIGHT";
         };
 
         option_cmd_down: option_cmd_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp DOWN_ARROW>;
+            bindings = <&macro_press &kp RIGHT_ALT &kp RIGHT_GUI>
+                     , <&macro_tap &kp DOWN_ARROW>
+                     , <&macro_release &kp RIGHT_ALT &kp RIGHT_GUI>;
             label = "OPTION_CMD_DOWN";
         };
 
         option_cmd_left: option_cmd_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp RIGHT_GUI &kp LEFT_ARROW>;
+            bindings = <&macro_press &kp RIGHT_ALT &kp RIGHT_GUI>
+                     , <&macro_tap &kp LEFT_ARROW>
+                     , <&macro_release &kp RIGHT_ALT &kp RIGHT_GUI>;
             label = "OPTION_CMD_LEFT";
         };
 
         mac_capcha_5: mac_capcha_5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp RIGHT_GUI &kp NUMBER_5>;
+            bindings = <&macro_press &kp LEFT_SHIFT &kp RIGHT_GUI>
+                     , <&macro_tap &kp NUMBER_5>
+                     , <&macro_release &kp LEFT_SHIFT &kp RIGHT_GUI>;
             label = "MAC_CAPCHA_5";
         };
     };
