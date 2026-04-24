@@ -27,7 +27,7 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
-#define JP_BACKSLASH    LA(0x89)          // \
+#define JP_BACKSLASH    RA(0x89)          // \
 
 / {
     macros {
