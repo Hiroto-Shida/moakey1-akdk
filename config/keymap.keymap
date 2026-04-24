@@ -27,7 +27,7 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
-#define JP_BACKSLASH    0x87              // \
+#define JP_BACKSLASH    LA(0x89)          // \
 
 / {
     macros {
@@ -125,7 +125,7 @@
 
         layer_2 {
             bindings = <
-&kp ESCAPE      &none  &none             &option_cmd_up    &none              &kp HASH                        &kp DOLLAR   &kp JP_CARET      &kp UP_ARROW    &kp JP_TILDE      &kp JP_PIPE  &none
+&kp ESCAPE      &none  &none             &option_cmd_up    &kp JP_YEN         &kp HASH                        &kp DOLLAR   &kp JP_CARET      &kp UP_ARROW    &kp JP_TILDE      &kp JP_PIPE  &none
 &kp LCTRL       &none  &option_cmd_left  &option_cmd_down  &option_cmd_right  &kp JP_AMPERSAND                &kp PERCENT  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW   &none  &none
 &kp LEFT_SHIFT  &none  &none             &none             &none                                &kp QUESTION  &kp SLASH    &kp JP_BACKSLASH  &kp LESS_THAN   &kp GREATER_THAN  &none  &none
 &none           &none  &none             &kp RIGHT_ALT     &kp RIGHT_GUI      &kp SPACE                       &kp SPACE    &none             &none           &none             &none  &none
