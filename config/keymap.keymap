@@ -100,6 +100,20 @@
 
             label = "MAC_CAPCHA_5";
         };
+
+        macro_jpYen: macro_jpYen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_tap>,
+                <&kp Y>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>;
+
+            label = "MACRO_JPYEN";
+        };
     };
 
     keymap {
@@ -125,7 +139,7 @@
 
         layer_2 {
             bindings = <
-&kp ESCAPE      &none  &none             &option_cmd_up    &kp JP_YEN        &kp HASH                     &kp DOLLAR   &kp CARET       &kp UP_ARROW    &kp TILDE         &kp PIPE  &none
+&kp ESCAPE      &none  &none             &option_cmd_up    &macro_jpYen       &kp HASH                     &kp DOLLAR   &kp CARET       &kp UP_ARROW    &kp TILDE         &kp PIPE  &none
 &kp LCTRL       &none  &option_cmd_left  &option_cmd_down  &option_cmd_right  &kp AMPERSAND                &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none     &none
 &kp LEFT_SHIFT  &none  &none             &none             &none                             &kp QUESTION  &kp SLASH    &kp BACKSLASH   &kp LESS_THAN   &kp GREATER_THAN  &none     &none
 &none           &none  &none             &kp RIGHT_ALT     &kp RIGHT_GUI      &kp SPACE                    &kp SPACE    &none           &kp SPACE       &none             &none     &none
